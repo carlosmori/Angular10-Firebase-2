@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
 import { MovieTableComponent } from './components/movie-table/movie-table.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     CreateMovieComponent,
     ErrorComponent,
     MovieTableComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,9 +39,10 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
     AngularFireAuthModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    NgbModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

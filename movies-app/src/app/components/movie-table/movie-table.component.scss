@@ -1,4 +1,10 @@
-.maine-container {
+:host {
+  display: block;
+}
+.main-container {
   .movie-item {
+  }
+  .movie-row{
+    cursor: pointer;
   }
 }

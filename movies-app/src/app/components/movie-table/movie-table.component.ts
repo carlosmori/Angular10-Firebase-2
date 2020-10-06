@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 // a. id
 // b. Nombre
@@ -32,6 +32,33 @@ const MOVIES_MOCK = [
     foto: 'https://godtv.com/wp-content/uploads/2020/10/FollowYourHeart_1680-x-1050p_final-1-800x600.jpeg',
   },
 ];
+
+const COUNTRIES = [
+  {
+    name: 'Russia',
+    flag: 'f/f3/Flag_of_Russia.svg',
+    area: 17075200,
+    population: 146989754,
+  },
+  {
+    name: 'Canada',
+    flag: 'c/cf/Flag_of_Canada.svg',
+    area: 9976140,
+    population: 36624199,
+  },
+  {
+    name: 'United States',
+    flag: 'a/a4/Flag_of_the_United_States.svg',
+    area: 9629091,
+    population: 324459463,
+  },
+  {
+    name: 'China',
+    flag: 'f/fa/Flag_of_the_People%27s_Republic_of_China.svg',
+    area: 9596960,
+    population: 1409517397,
+  },
+];
 @Component({
   selector: 'app-movie-table',
   templateUrl: './movie-table.component.html',
@@ -39,8 +66,15 @@ const MOVIES_MOCK = [
 })
 export class MovieTableComponent implements OnInit {
   movies = MOVIES_MOCK;
+  countries = COUNTRIES;
+  @Output()
+  propagar = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  test(movie) {
+    this.propagar.emit(movie);
+  }
 }

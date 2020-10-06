@@ -1,3 +1,2 @@
-<p>search works!</p>
-<app-movie-table></app-movie-table>
-<app-movie-detail></app-movie-detail>
+<app-movie-table (propagar)="procesaPropagar($event)"></app-movie-table>
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>

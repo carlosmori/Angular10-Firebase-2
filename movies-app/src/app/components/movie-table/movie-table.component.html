@@ -1,7 +1,29 @@
 <div class="main-container">
-  <mat-grid-list cols="1" rowHeight="100px">
-    <mat-grid-tile *ngFor="let movie of movies">
-      {{ movie.nombre }}
-    </mat-grid-tile>
-  </mat-grid-list>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Imagen</th>
+        <th scope="col">Pelicula</th>
+        <th scope="col">Genero</th>
+        <th scope="col">Fecha de Estreno</th>
+        <th scope="col">Cantidad de espectadores</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let movie of movies; index as i" (click)="test(movie)" class="movie-row">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <img [src]="movie.foto" class="mr-2" style="width: 100px" />
+        </td>
+
+        <td>{{ movie.nombre }}</td>
+        <td>{{ movie.tipo }}</td>
+        <td>{{ movie.fecha_estreno }}</td>
+        <td>{{ movie.cantidad_publico }}</td>
+        <!-- <td>{{ country.area | number }}</td>
+        <td>{{ country.population | number }}</td> -->
+      </tr>
+    </tbody>
+  </table>
 </div>
