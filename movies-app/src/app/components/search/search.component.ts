@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/interfaces/movie';
 
 @Component({
   selector: 'app-search',
@@ -6,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent implements OnInit {
-  selectedMovie: any;
+  selectedMovie: Movie;
   constructor() {}
 
   ngOnInit(): void {}
-  procesaPropagar(movie) {
+  selectMovie(movie: Movie) {
     this.selectedMovie = movie;
   }
 }
