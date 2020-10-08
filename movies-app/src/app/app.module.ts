@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { SearchComponent } from './components/search/search.component';
 import { CreateActorComponent } from './components/create-actor/create-actor.component';
-import { ActorListComponent } from './components/actor-list/actor-list.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
 import { CreateMovieComponent } from './components/create-movie/create-movie.component';
 import { ErrorComponent } from './components/error/error.component';
@@ -18,6 +17,8 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { MovieTableComponent } from './components/movie-table/movie-table.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ActorsTableComponent } from './components/actors-table/actors-table.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +26,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     WelcomeComponent,
     SearchComponent,
     CreateActorComponent,
-    ActorListComponent,
     MoviesListComponent,
     CreateMovieComponent,
     ErrorComponent,
     MovieTableComponent,
     MovieDetailComponent,
+    ActorsTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFirestoreModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
+    FormsModule,
     NgbModule,
   ],
   providers: [],

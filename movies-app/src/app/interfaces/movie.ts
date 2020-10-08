@@ -1,4 +1,4 @@
-import { StringLiteral } from 'typescript';
+import { Actor } from './actor';
 
 export interface Movie {
   id: number;
@@ -6,5 +6,6 @@ export interface Movie {
   tipo: string;
   fecha_estreno: string;
   cantidad_publico: number;
-  foto: string;
+  foto?: string;
+  actor?: Actor;
 }
