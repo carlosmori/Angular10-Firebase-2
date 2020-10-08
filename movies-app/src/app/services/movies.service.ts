@@ -11,7 +11,7 @@ export class MoviesService {
   ) {}
   getMovies() {
     const moviesRef = this.firestore.collection<Movie>('movies');
-    return moviesRef.valueChanges();
+    return moviesRef.valueChanges({ idField: 'movieDocumentId' });
   }
   createMovie(data) {
     return new Promise<any>((resolve, reject) => {
@@ -23,5 +23,8 @@ export class MoviesService {
           (err) => reject(err)
         );
     });
+  }
+  logicDelete({ movieDocumentId, borrado }) {
+    return this.firestore.collection('movies').doc(movieDocumentId).set({ borrado }, { merge: true });
   }
 }

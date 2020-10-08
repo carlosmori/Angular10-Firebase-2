@@ -76,8 +76,8 @@ export class MovieTableComponent implements OnInit {
   constructor(private moviesService: MoviesService) {}
 
   ngOnInit(): void {
-    this.moviesService.getMovies().subscribe((res) => {
-      this.movies = res;
+    this.moviesService.getMovies().subscribe((movies) => {
+      this.movies = movies.filter((mov) => mov.borrado === 1);
     });
   }
 

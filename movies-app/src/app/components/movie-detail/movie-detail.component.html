@@ -1,4 +1,7 @@
 <div class="main-container">
   <h1>Movie Detail</h1>
   <h3>{{ movie.nombre }}</h3>
+  <button *ngIf="movie.borrado === 1" type="button" class="btn btn-danger" (click)="borrarPelicula()">
+    Borrar Pelicula
+  </button>
 </div>

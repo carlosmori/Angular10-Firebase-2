@@ -5,7 +5,9 @@ export interface Movie {
   nombre: string;
   tipo: string;
   fecha_estreno: string;
+  movieDocumentId?: string;
   cantidad_publico: number;
   foto?: string;
   actor?: Actor;
+  borrado?: number;
 }

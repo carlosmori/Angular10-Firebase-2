@@ -16,6 +16,7 @@ export class CreateMovieComponent implements OnInit {
     tipo: 'Terror',
     fecha_estreno: '',
     cantidad_publico: null,
+    borrado: 1,
     actor: {
       id: null,
       foto: '',
@@ -30,7 +31,7 @@ export class CreateMovieComponent implements OnInit {
 
   ngOnInit(): void {
     this.moviesService.getMovies().subscribe((movies) => {
-      this.movies = movies;
+      this.movies = movies.filter((mov) => mov.borrado === 1);
     });
   }
   CargarPelicula(event) {
