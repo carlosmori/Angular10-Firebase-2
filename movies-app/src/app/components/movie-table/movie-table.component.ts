@@ -69,7 +69,7 @@ const MOVIES_MOCK = [
 })
 export class MovieTableComponent implements OnInit {
   @Output()
-  selectMovie = new EventEmitter<Movie>();
+  selectedMovie = new EventEmitter<Movie>();
   movies;
   selectedRow: number;
 
@@ -81,8 +81,8 @@ export class MovieTableComponent implements OnInit {
     });
   }
 
-  test(movie: Movie): void {
-    this.selectMovie.emit(movie);
+  selectMovie(movie: Movie): void {
+    this.selectedMovie.emit(movie);
     this.selectedRow = movie.id;
   }
 }
