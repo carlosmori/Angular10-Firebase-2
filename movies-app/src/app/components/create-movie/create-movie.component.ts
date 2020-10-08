@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Actor } from 'src/app/interfaces/actor';
 import { Movie } from 'src/app/interfaces/movie';
 import { MoviesService } from 'src/app/services/movies.service';
@@ -27,7 +28,8 @@ export class CreateMovieComponent implements OnInit {
     },
   };
   movies: Movie[];
-  constructor(private moviesService: MoviesService) {}
+  loading: boolean;
+  constructor(private router: Router, private moviesService: MoviesService) {}
 
   ngOnInit(): void {
     this.moviesService.getMovies().subscribe((movies) => {
@@ -39,6 +41,11 @@ export class CreateMovieComponent implements OnInit {
     event.stopPropagation();
     this.newMovie.id = this.movies[this.movies.length - 1].id + 1;
     this.moviesService.createMovie(this.newMovie);
+    this.loading = true;
+    setTimeout(() => {
+      this.loading = false;
+      this.router.navigate(['/busqueda']);
+    }, 1500);
   }
 
   selectActor(actor: Actor) {

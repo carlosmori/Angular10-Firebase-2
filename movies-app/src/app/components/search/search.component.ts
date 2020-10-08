@@ -14,4 +14,7 @@ export class SearchComponent implements OnInit {
   selectMovie(movie: Movie) {
     this.selectedMovie = movie;
   }
+  cleanSelectedMovie($event) {
+    this.selectedMovie = null;
+  }
 }

@@ -1,2 +1,2 @@
 <app-movie-table (selectedMovie)="selectMovie($event)"></app-movie-table>
-<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+<app-movie-detail (cleanSelectedMovie)="cleanSelectedMovie($event)" [movie]="selectedMovie"></app-movie-detail>

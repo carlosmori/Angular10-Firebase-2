@@ -1,10 +1,12 @@
 <div class="main-container">
-  <h1>{{ movie.nombre }}</h1>
-  <img [src]="movie.foto" class="mr-2" style="width: 100px" />
-  <div class="genero">Genero: {{ movie.tipo }}</div>
-  <div class="estreno">Fecha de Estreno : {{ movie.fecha_estreno }}</div>
-  <div class="espectadores">Cantidad de Publico : {{ movie.cantidad_publico }}</div>
-  <button *ngIf="movie.borrado === 1" type="button" class="btn btn-danger" (click)="borrarPelicula()">
-    Borrar Pelicula
-  </button>
+  <div *ngIf="movie">
+    <h1>{{ movie.nombre }}</h1>
+    <img [src]="movie.foto" class="mr-2" style="width: 100px" />
+    <div class="genero">Genero: {{ movie.tipo }}</div>
+    <div class="estreno">Fecha de Estreno : {{ movie.fecha_estreno }}</div>
+    <div class="espectadores">Cantidad de Publico : {{ movie.cantidad_publico }}</div>
+    <button *ngIf="movie.borrado === 1" type="button" class="btn btn-danger" (click)="borrarPelicula()">
+      Borrar Pelicula
+    </button>
+  </div>
 </div>
