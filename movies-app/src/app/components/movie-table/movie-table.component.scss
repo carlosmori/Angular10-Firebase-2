@@ -2,12 +2,14 @@
   display: block;
 }
 .main-container {
+  height: 100%;
+  background-color: #7fffd454;
   .movie-item {
   }
   .movie-row {
     cursor: pointer;
   }
   .data-selected {
-    background-color: lightblue;
+    background-color: #0cc184;
   }
 }

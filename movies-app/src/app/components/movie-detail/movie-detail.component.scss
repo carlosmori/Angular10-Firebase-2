@@ -1,0 +1,25 @@
+:host {
+  display: block;
+}
+.main-container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #7fffd454;
+  h1 {
+    font-size: 3rem;
+  }
+  .genero,
+  .estreno,
+  .espectadores {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  button {
+    margin: 5%;
+  }
+}

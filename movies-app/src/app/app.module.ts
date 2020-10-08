@@ -19,6 +19,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ActorsTableComponent } from './components/actors-table/actors-table.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FormsModule } from '@angular/forms';
     MovieTableComponent,
     MovieDetailComponent,
     ActorsTableComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

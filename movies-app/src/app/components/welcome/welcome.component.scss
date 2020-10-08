@@ -1,0 +1,13 @@
+.main-container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #7fffd454;
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+}
